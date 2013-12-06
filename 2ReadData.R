@@ -10,16 +10,13 @@
 
 ##################### getting twitter data ##############
 
-if(file.exists("data\\all_tweet.rda")) {
-  load("data\\tweet.rda")
+if(file.exists("tweet.rda")) {
+  load("tweet.rda")
 } else {
     drv <- dbDriver("PostgreSQL")
     con <- dbConnect(drv, dbname = "gis", user = "gisuser", password = "user", host = "10.75.14.108")
-    dbListTables(con)
-    dbGetInfo(drv)
-    summary(con)
     tweets <- dbReadTable(con,name="geotweets")
-    save(tweets, file = "data\\tweet.rda", compress = "xz")
+    save(tweets, file = "tweet.rda", compress = "xz")
 }
 
 #################### empty raster with right extent, projection and resolution ########

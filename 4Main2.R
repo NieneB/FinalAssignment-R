@@ -5,7 +5,7 @@
 # date: 05-12-2013
 
 # First set own working directory
-setwd("E:/Last_Assignment")
+setwd("E:/Last_Assignment/FinalAssignment-R")
 
 # loading libraries
 library(extrafont)

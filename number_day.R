@@ -21,7 +21,7 @@ tweets.day <- lapply(list.days, function(x){
   tweet4 <- data.frame(tweet3)
   return(tweet4)
 })
-save(tweets.day, file = "data\\number_tweet_day.rda", compress = "xz")
+save(tweets.day, file = "number_tweet_day.rda", compress = "xz")
 
 # Save GIF HTML
 saveHTML(lapply(names(tweets.day), function(q){

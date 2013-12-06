@@ -24,7 +24,7 @@ tweets.average <- lapply(list.hours, function(x){
   tweet4$average <- tweet4$layer/tweet4$n
   return(tweet4)
 })
-save(tweets.average, file = "data\\average_tweet_hour.rda", compress = "xz")
+save(tweets.average, file = "average_tweet_hour.rda", compress = "xz")
 
 # Getting the right names
 

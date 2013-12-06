@@ -23,7 +23,7 @@ tweets.day.hour <- lapply(list.hour.day, function(x){
   return(tweet4)
 })
 
-save(tweets.day.hour, file = "data\\number_tweet_day_hour.rda", compress = "xz")
+save(tweets.day.hour, file = "number_tweet_day_hour.rda", compress = "xz")
 
 # Save GIF HTML
 saveHTML(lapply(names(tweets.day.hour), function(q){
