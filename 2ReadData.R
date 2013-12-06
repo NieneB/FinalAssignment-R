@@ -1,3 +1,8 @@
+# Final assignment for the course: Applied Geo-scripting
+# author: Niene Boeijen
+# reg.nr. 900918-088-070
+# date: 05-12-2013
+
 # This is 2ReadData.R script
 # To run this script is only possible from WUR network to set up database connection!
 # Twitter list is accessed
@@ -6,7 +11,7 @@
 ##################### getting twitter data ##############
 
 if(file.exists("data\\all_tweet.rda")) {
-  load("data\\all_tweet.rda")
+  load("data\\tweet.rda")
 } else {
     drv <- dbDriver("PostgreSQL")
     con <- dbConnect(drv, dbname = "gis", user = "gisuser", password = "user", host = "10.75.14.108")
@@ -14,7 +19,7 @@ if(file.exists("data\\all_tweet.rda")) {
     dbGetInfo(drv)
     summary(con)
     tweets <- dbReadTable(con,name="geotweets")
-    save(tweets, file = "data\\all_tweet.rda", compress = "xz")
+    save(tweets, file = "data\\tweet.rda", compress = "xz")
 }
 
 #################### empty raster with right extent, projection and resolution ########

@@ -1,4 +1,10 @@
-### setting working directory #####
+# Final assignment for the course: Applied Geo-scripting
+# author: Niene Boeijen
+# reg.nr. 900918-088-070
+# date: 05-12-2013
+
+# This is 1Prepare.R script
+# For installing packages and loading libraries
 
 ### installing packages ##########
 install.packages("RPostgreSQL")
